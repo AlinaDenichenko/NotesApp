@@ -2,7 +2,6 @@ package com.example.notesapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -10,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesapp.exceptions.EmailInvalidException
 import com.example.notesapp.exceptions.NameLengthException
 import com.example.notesapp.exceptions.PasswordInvalidException
+import com.example.notesapp.validation.SignUpValidation
 
 class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,16 +17,14 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         val loginButton = findViewById<Button>(R.id.login_button)
         val signupButton = findViewById<Button>(R.id.signup_button)
-        loginButton.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-
         val firstName = findViewById<EditText>(R.id.first_name)
         val lastName = findViewById<EditText>(R.id.last_name)
         val email = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
 
+        loginButton.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
         firstName.setOnClickListener {
             firstName.text.clear()
         }
@@ -42,10 +40,10 @@ class SignUpActivity : AppCompatActivity() {
 
         signupButton.setOnClickListener {
             try {
-                SignupValidation.nameValidation(firstName.text.toString())
-                SignupValidation.nameValidation(lastName.text.toString())
-                SignupValidation.emailValidation(email.text.toString())
-                SignupValidation.passwordValidation(password.text.toString())
+                SignUpValidation.nameValidation(firstName.text.toString())
+                SignUpValidation.nameValidation(lastName.text.toString())
+                SignUpValidation.emailValidation(email.text.toString())
+                SignUpValidation.passwordValidation(password.text.toString())
             } catch (e: NameLengthException) {
                 Toast.makeText(this, "Invalid name", Toast.LENGTH_LONG).show()
             } catch (e: EmailInvalidException) {

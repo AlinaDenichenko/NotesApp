@@ -9,51 +9,30 @@
 
     <TextView
         android:id="@id/title"
+        style="@style/TitleStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Spiice"
-        android:textSize="100sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/signup_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:text="Discover the platform"
-        android:textSize="20sp" />
+        android:text="@string/title" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center|bottom"
-        android:layout_margin="30dp">
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/signup_button"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You have an account? "
-            android:layout_gravity="center"
-            android:textSize="20dp"/>
+            android:text="@string/discover_the_platform" />
 
         <Button
             android:id="@+id/login_button"
+            style="@style/ButtonStyle.WhiteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log in"
-            android:textStyle="bold"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:text="@string/you_have_an_account_log_in" />
 
     </LinearLayout>
 

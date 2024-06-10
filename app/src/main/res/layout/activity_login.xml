@@ -7,68 +7,54 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:layout_gravity="top|center"
-       android:layout_marginTop="100dp"
-       android:padding="50dp"
-       android:background="@android:drawable/dialog_holo_light_frame">
+    <LinearLayout
+        style="@style/FieldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Log-in"
-           android:textStyle="bold"
-           android:textSize="30dp"
-           android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/log_in_text_view"
+            style="@style/HeaderStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in" />
 
-       <EditText
-           android:id="@+id/email"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:padding="10dp"
-           android:layout_margin="10dp"
-           android:background="@color/material_dynamic_neutral90"
-           android:text="Email"/>
+        <EditText
+            android:id="@+id/email"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/email" />
 
-       <EditText
-           android:id="@+id/password"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:padding="10dp"
-           android:layout_margin="10dp"
-           android:background="@color/material_dynamic_neutral90"
-           android:text="Password"/>
+        <EditText
+            android:id="@+id/password"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/password" />
 
-   </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="50dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/login_button"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log-in"
-            android:layout_gravity="center"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textSize="20dp"/>
+            android:text="@string/log_in" />
 
         <Button
             android:id="@+id/return_to_signup_button"
+            style="@style/ButtonStyle.WhiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:text="Return to Sign-up"/>
+            android:text="@string/return_to_sign_up" />
 
     </LinearLayout>
 

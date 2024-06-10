@@ -8,57 +8,45 @@
     tools:context=".SignUpActivity">
 
     <LinearLayout
+        style="@style/FieldStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="top|center"
-        android:layout_marginTop="100dp"
-        android:padding="50dp"
-        android:background="@android:drawable/dialog_holo_light_frame">
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/sign_up_text_view"
+            style="@style/HeaderStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign-up"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:layout_gravity="center"/>
+            android:text="@string/sign_up" />
 
         <EditText
             android:id="@+id/first_name"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:background="@color/material_dynamic_neutral90"
-            android:text="First Name"/>
+            android:text="@string/first_name" />
 
         <EditText
             android:id="@+id/last_name"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:background="@color/material_dynamic_neutral90"
-            android:text="Last Name"/>
+            android:text="@string/last_name" />
 
         <EditText
             android:id="@+id/email"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:background="@color/material_dynamic_neutral90"
-            android:text="Email"/>
+            android:text="@string/email" />
 
         <EditText
             android:id="@+id/password"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:background="@color/material_dynamic_neutral90"
-            android:text="Password"/>
+            android:text="@string/password" />
 
     </LinearLayout>
 
@@ -66,27 +54,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="50dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/signup_button"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign-up"
-            android:layout_gravity="center"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:textSize="20dp"/>
+            android:text="@string/sign_up" />
 
         <Button
             android:id="@+id/login_button"
+            style="@style/ButtonStyle.WhiteButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:text="You have an account? Log in"/>
+            android:text="@string/you_have_an_account_log_in" />
 
     </LinearLayout>
 
