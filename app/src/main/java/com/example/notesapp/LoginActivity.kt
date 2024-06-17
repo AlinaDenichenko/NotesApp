@@ -2,10 +2,9 @@ package com.example.notesapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.notesapp.databinding.ActivityLoginBinding
 import com.example.notesapp.exceptions.EmailInvalidException
 import com.example.notesapp.exceptions.PasswordInvalidException
 import com.example.notesapp.validation.LogInValidation
@@ -13,11 +12,12 @@ import com.example.notesapp.validation.LogInValidation
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-        val returnToSignUpButton = findViewById<Button>(R.id.return_to_signup_button)
-        val logInButton = findViewById<Button>(R.id.login_button)
-        val email = findViewById<EditText>(R.id.email)
-        val password = findViewById<EditText>(R.id.password)
+        val binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val returnToSignUpButton = binding.returnToSignupButton
+        val logInButton = binding.loginButton
+        val email = binding.email
+        val password = binding.password
 
         returnToSignUpButton.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
@@ -37,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
             } catch (e: PasswordInvalidException) {
                 Toast.makeText(this, "Invalid password", Toast.LENGTH_LONG).show()
             }
+            startActivity(Intent(this, NotesListActivity::class.java))
         }
     }
 }

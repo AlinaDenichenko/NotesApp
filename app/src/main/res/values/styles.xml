@@ -37,8 +37,43 @@
 
     <style name="EditTextStyle">
         <item name="android:layout_margin">10dp</item>
-        <item name="background">@color/material_dynamic_neutral90</item>
+        <item name="android:background">@color/material_dynamic_neutral90</item>
         <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="TextViewNoteTitle">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="fontFamily">@font/petrona</item>
+    </style>
+
+    <style name="TextViewNoteDate">
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/petrona</item>
+    </style>
+
+    <style name="TextViewNoteDescription">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="fontFamily">@font/petrona</item>
+    </style>
+
+    <style name="ButtonTop">
+        <item name="android:textColor">@color/grey</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="DatePicker">
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:spinnersShown">true</item>
     </style>
 
 </resources>
