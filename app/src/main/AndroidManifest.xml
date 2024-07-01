@@ -21,18 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".AddNoteActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".NotesListActivity"
-            android:exported="false"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
