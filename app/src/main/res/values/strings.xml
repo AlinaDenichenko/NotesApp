@@ -13,4 +13,9 @@
     <string name="add_note">Add Note</string>
     <string name="add">Add</string>
     <string name="logout">Logout</string>
+    <string name="required">Required</string>
+    <string name="minimum_three_characters">Minimum length is 3 characters</string>
+    <string name="email_format">Email format</string>
+    <string name="back">Back</string>
+    <string name="password_validator">Minimum length is 6 characters, must contain upper and lower case letters, number and sign</string>
 </resources>
